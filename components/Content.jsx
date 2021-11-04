@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import AdyLogin from '../components/AdyLogin';
 import contentData from '../utils/contentData';
 
 const Content = () => (
@@ -9,6 +9,9 @@ const Content = () => (
     <h2 className="my-5 text-center" data-testid="content-title">
       What can I do next?
     </h2>
+    <p>
+      <AdyLogin />
+    </p>
     <Row className="d-flex justify-content-between" data-testid="content-items">
       {contentData.map((col, i) => (
         <Col key={i} md={5} className="mb-4">

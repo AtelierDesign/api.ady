@@ -1,21 +1,20 @@
 import { handleAuth, handleLogin } from '@auth0/nextjs-auth0';
 
 
-const audience = process.env.AUTH0_AUDIENCE;
-const authscope = process.env.AUTH0_SCOPE;
 
 export default handleAuth({
   async login(req, res) {
     try {
       await handleLogin(req, res, {
         authorizationParams: {
-          audience: 'audience', // or AUTH0_AUDIENCE
+          audience: 'https://auth.ady.world/api/auth/v2/', // or AUTH0_AUDIENCE
           // Add the `offline_access` scope to also get a Refresh Token
-          scope: 'authscope' // or AUTH0_SCOPE
+          scope: 'openid profile email read:shows' // or AUTH0_SCOPE
         }
       });
     } catch (error) {
       res.status(error.status || 400).end(error.message);
     }
   }
+
 });

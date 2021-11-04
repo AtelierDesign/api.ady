@@ -13,6 +13,8 @@ const baseUrl = process.env.AUTH0_BASE_URL;
 const issuerBaseUrl = process.env.AUTH0_ISSUER_BASE_URL;
 const audience = process.env.AUTH0_AUDIENCE;
 
+const { auth } = require('express-oauth2-jwt-bearer');
+
 if (!baseUrl || !issuerBaseUrl) {
   throw new Error('Please make sure that the file .env.local is in place and populated');
 }
@@ -26,12 +28,17 @@ app.use(morgan('dev'));
 app.use(helmet());
 app.use(cors({ origin: baseUrl }));
 
+const checkJwt = auth({
+  audience: 'https://auth.ady.world/api/auth/v2',
+  issuerBaseURL: `${issuerBaseUrl}/`,
+});
+
 const checkJwt = jwt({
   secret: jwksRsa.expressJwtSecret({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: `${baseUrl}/.well-known/jwks.json`
+    jwksUri: `${issuerBaseUrl}/.well-known/jwks.json`
   }),
   audience: audience,
   issuer: `${issuerBaseUrl}/`,
@@ -42,6 +49,10 @@ app.get('/api/shows', checkJwt, (req, res) => {
   res.send({
     msg: 'Your access token was successfully validated!'
   });
+});
+
+app.get('/authorized', checkJwt, (req, res) {
+    res.send('Secured Resource');
 });
 
 const server = app.listen(port, () => console.log(`API Server listening on port ${port}`));

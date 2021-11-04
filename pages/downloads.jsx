@@ -34,11 +34,7 @@ function Profile() {
               <p className="lead text-muted" data-testid="profile-email">
                 {user.email}
               </p>
-              <p>Take me to
-                <PageLink href="/downloads" className="page-link" testId="my-downloads">
-                  My Downloads
-                </PageLink>
-              </p>
+              <p>Take me to you've made it to your downloads page!!</p>
             </Col>
           </Row>
           <Row data-testid="profile-json">
