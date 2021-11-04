@@ -122,13 +122,13 @@ const NavBar = () => {
                 <NavItem>
                   <span className="user-info">
                     <Image
-                      src={user.picture}
+                      src={ProfileImage}
                       alt="Profile"
-                      className="nav-user-profile d-inline-block rounded-circle mr-3"
-                      width={50}
-                      height={50}
+                      className="prof"
+                      width={30}
+                      height={30}
                       decode="async"
-                      data-testid="navbar-picture-mobile"
+                      data-testid="navbar-picture-desktop"
                     />
                     <h6 className="d-inline-block" data-testid="navbar-user-mobile">
                       {user.name}
