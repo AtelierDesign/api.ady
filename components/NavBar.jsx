@@ -14,6 +14,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 import { useUser } from '@auth0/nextjs-auth0';
+import ProfileImage from '/public/svg/profile.svg';
 
 import PageLink from './PageLink';
 import AnchorLink from './AnchorLink';
@@ -27,7 +28,9 @@ const NavBar = () => {
     <div className="nav-container" data-testid="navbar">
       <Navbar color="light" light expand="md">
         <Container>
+          {/*}
           <NavbarBrand className="logo" />
+          {*/}
           <NavbarToggler onClick={toggle} data-testid="navbar-toggle" />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar data-testid="navbar-items">
@@ -72,11 +75,11 @@ const NavBar = () => {
                 <UncontrolledDropdown nav inNavbar data-testid="navbar-menu-desktop">
                   <DropdownToggle nav caret id="profileDropDown">
                     <Image
-                      src={user.picture}
+                      src={ProfileImage}
                       alt="Profile"
-                      className="nav-user-profile rounded-circle"
-                      width={50}
-                      height={50}
+                      className="prof"
+                      width={30}
+                      height={30}
                       decode="async"
                       data-testid="navbar-picture-desktop"
                     />
