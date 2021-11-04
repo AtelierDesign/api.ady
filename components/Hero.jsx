@@ -13,6 +13,8 @@ const Hero = () => (
       This is a sample application to demonstrate our Authentication API & flow for a Regular Web App, using{' '}
       <a href="https://nextjs.org">Next.js</a>
     </p>
+
+    <p>WELCOME TO THE DESIGN YIELD®</p>
   </div>
 );
 
