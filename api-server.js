@@ -31,7 +31,7 @@ const checkJwt = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: `${issuerBaseUrl}/.well-known/jwks.json`
+    jwksUri: `${baseUrl}/.well-known/jwks.json`
   }),
   audience: audience,
   issuer: `${issuerBaseUrl}/`,

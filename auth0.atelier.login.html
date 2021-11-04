@@ -193,7 +193,7 @@
           </div>
 
           <div class="spacer"></div>
-          <p>Don't have an account? <strong>Sign Up</strong></p>
+          <p>Don't have an account? <strong><a href="/api/signup">Sign Up</a></strong></p>
           <hr />
           <div class="d-grid gap-2">
             <button id="btn-twitter" class="btn btn-light" type="button">
@@ -252,6 +252,14 @@
       var captcha = webAuth.renderCaptcha(
         document.querySelector('.captcha-container')
       );
+
+      var isSignup = config.extraParams && config.extraParams.action === 'signup';
+      var lock = new Auth0Lock(config.clientID, config.auth0Domain, {
+        // [...] all other Lock options
+        // use the value obtained to decide the first screen
+        initialScreen: isSignup ? 'signUp' : 'login'
+      });
+
 
       function login(e) {
         e.preventDefault();

@@ -5,13 +5,11 @@ import NavBarItem from './NavBarItem';
 
 const PageLink = ({ children, href, className, icon, tabIndex, testId }) => {
   return (
-    <Link href={href} passHref>
-      <a>
+      <a href={href} passHref>
         <NavBarItem href={href} className={className} icon={icon} tabIndex={tabIndex} testId={testId}>
           {children}
         </NavBarItem>
       </a>
-    </Link>
   );
 };
 
