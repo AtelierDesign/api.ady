@@ -53,7 +53,7 @@ const NavBar = () => {
                   </NavItem>
                   <NavItem>
                     <PageLink href="/external" className="nav-link" testId="navbar-external">
-                      External API
+                      External API (Login)
                     </PageLink>
                   </NavItem>
                 </>
