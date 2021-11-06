@@ -32,7 +32,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
-              <Link href="/welcome">
+              <Link href="/open">
                 <a className="nav-link" aria-expanded="false">
                   Dropdown
                 </a>
