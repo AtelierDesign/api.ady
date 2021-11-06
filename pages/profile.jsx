@@ -4,19 +4,14 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Highlight from '../components/Highlight';
 
 import Loading from '../components/Loading';
-import { useUser } from '@auth0/nextjs-auth0';
 
-export default function Profile({ user }) {
-  const { user, error, isLoading } = useUser();
-
-  if (isLoading) return <Loading />;
-  if (error) return <div>{error.message}</div>;
-
+export default function SSRPage({ user }) {
   return (
-    user && (
-      <div>
+    <>
+      <div data-testid="ssr">
         <Image src={user.picture} alt={user.name} width={40} height={40} />
         <h3>Here is your Profile Information.</h3>
+        <h4>{user.nickname}</h4>
         <h4>{user.name}</h4>
         <h4>{user.email}</h4>
         <div>
@@ -42,7 +37,7 @@ export default function Profile({ user }) {
           </div>
         </div>
       </div>
-    )
+    </>
   );
 }
 
