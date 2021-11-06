@@ -16,10 +16,9 @@ const Layout = ({ children }) => (
       />
       <title>Next.js Sample App</title>
     </Head>
-    <main id="app" className="d-flex flex-column h-100" data-testid="layout">
-      <NavBar />
-      <Container className="flex-grow-1 mt-5">{children}</Container>
-      <Footer />
+    <NavBar />
+    <main id="app" className="main" data-testid="layout">
+      <div className="main">{children}</div>
     </main>
   </>
 );

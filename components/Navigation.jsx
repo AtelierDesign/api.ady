@@ -19,15 +19,15 @@ import ProfileImage from '/public/svg/profile.svg';
 import PageLink from './PageLink';
 import AnchorLink from './AnchorLink';
 
-const NavBar = () => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isLoading } = useUser();
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div className="nav-container" data-testid="navbar">
-      <Navbar className="navigation" color="light" light expand="md">
-        <Container>
+      <nav className="navbar fixed-top navbar-dark bg-blur">
+        <Container className="container-fluid">
           {/*}
           <NavbarBrand className="logo" />
           {*/}
@@ -64,7 +64,7 @@ const NavBar = () => {
                 <NavItem id="qsLoginBtn">
                   <AnchorLink
                     href="/api/auth/login"
-                    className="btn btn-primary btn-margin"
+                    className="btn btn-primary btn-margin btn-top"
                     tabIndex={0}
                     testId="navbar-login-desktop">
                     Log in
@@ -153,9 +153,9 @@ const NavBar = () => {
             )}
           </Collapse>
         </Container>
-      </Navbar>
+      </nav>
     </div>
   );
 };
 
-export default NavBar;
+export default Navigation;

@@ -9,7 +9,7 @@ import Highlight from '../components/Highlight';
 
 import PageLink from '../components/PageLink';
 
-function Profile() {
+function Downloads() {
   const { user, isLoading } = useUser();
 
   return (
@@ -46,7 +46,7 @@ function Profile() {
   );
 }
 
-export default withPageAuthRequired(Profile, {
+export default withPageAuthRequired(Downloads, {
   onRedirecting: () => <Loading />,
   onError: error => <ErrorMessage>{error.message}</ErrorMessage>
 });
