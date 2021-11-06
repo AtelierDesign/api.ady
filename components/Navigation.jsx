@@ -59,6 +59,8 @@ const Navigation = () => {
                 </>
               )}
             </Nav>
+
+
             <Nav className="d-none d-md-block" navbar>
               {!isLoading && !user && (
                 <NavItem id="qsLoginBtn">

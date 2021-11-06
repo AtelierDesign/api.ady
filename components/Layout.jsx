@@ -3,6 +3,7 @@ import { Container } from 'reactstrap';
 import Head from 'next/head';
 
 import NavBar from './NavBar';
+import Navigation from './Navigation';
 import Footer from './Footer';
 
 const Layout = ({ children }) => (
