@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar fixed-top navbar-light bg-blur">
-      <div className="container-fluid">
+      <div className="container-fluid px-4">
         <a className="navbar-brand" href="/">
           ATELIER DESIGN YIELD®
         </a>

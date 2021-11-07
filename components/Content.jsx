@@ -9,9 +9,8 @@ const Content = () => (
     <h2 className="my-5 text-center" data-testid="content-title">
       What can I do next?
     </h2>
-    <p>
-      <AdyLogin />
-    </p>
+
+    <div className="container">
     <Row className="d-flex justify-content-between" data-testid="content-items">
       {contentData.map((col, i) => (
         <Col key={i} md={5} className="mb-4">
@@ -25,6 +24,7 @@ const Content = () => (
         </Col>
       ))}
     </Row>
+  </div>
   </div>
 );
 

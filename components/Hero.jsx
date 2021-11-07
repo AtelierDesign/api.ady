@@ -14,7 +14,6 @@ const Hero = () => (
       <a href="https://nextjs.org">Next.js</a>
     </p>
 
-    <p>WELCOME TO THE DESIGN YIELD®</p>
   </div>
 );
 

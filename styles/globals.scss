@@ -1,6 +1,15 @@
 /* Global Styles */
 
 // @import "atelier.auth";
+@import "variables";
+@import "@radix-ui/colors/lime.css";
+@import "@radix-ui/colors/sky.css";
+@import "@radix-ui/colors/skyDark.css";
+@import "@radix-ui/colors/orange.css";
+@import "@radix-ui/colors/bronze.css";
+@import "@radix-ui/colors/bronzeDark.css";
+
+@import '/bootstrap/dist/css/bootstrap.css';
 
 html,
 body {
@@ -154,12 +163,16 @@ body {
 
 .main {
   height: auto;
-  padding: 0;
+  padding-top: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 50px;
   margin:0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: var(--bronze1)
 }
 
 /*

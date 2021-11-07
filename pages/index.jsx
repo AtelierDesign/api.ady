@@ -1,8 +1,9 @@
 import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0';
 
-import Hero from '../components/Hero';
+import HeroDark from '../components/HeroDark';
 import Content from '../components/Content';
+import ThreeCols from '../components/ThreeCols';
 
 import AdyLogin from '../components/AdyLogin';
 
@@ -24,7 +25,9 @@ export default function Index() {
   }
   return (
     <>
-    <Hero />
+    <HeroDark />
+    <ThreeCols />
+    <Content />
     </>
   );
 }

@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
     </Head>
     <NavBar />
     <main id="app" className="main" data-testid="layout">
-      <div className="main">{children}</div>
+      <div>{children}</div>
     </main>
   </>
 );
