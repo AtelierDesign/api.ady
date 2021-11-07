@@ -2,6 +2,7 @@ import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0';
 
 import HeroDark from '../components/HeroDark';
+import Hero from '../components/Hero';
 import Content from '../components/Content';
 import ThreeCols from '../components/ThreeCols';
 
