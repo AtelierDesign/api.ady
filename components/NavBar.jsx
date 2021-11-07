@@ -14,10 +14,10 @@ const NavBar = () => {
   const { user, isLoading } = useUser();
 
   return (
-    <nav className="navbar fixed-top navbar-dark bg-blur">
+    <nav className="navbar fixed-top navbar-light bg-blur">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Navbar Logo
+          ATELIER DESIGN YIELD®
         </a>
         <button
           className="navbar-toggler"
@@ -27,7 +27,9 @@ const NavBar = () => {
           aria-controls="navbarNavDarkDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <span className="menu-icon">
+            <Image src="/svg/menu.svg" alt="Menu" width={20} height={30} />
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul className="navbar-nav">
@@ -66,7 +68,7 @@ const NavBar = () => {
               <NavItem>
               <AnchorLink
                 href="/api/auth/login"
-                className="btn btn-primary btn-block"
+                className="nav-link nav-link-main"
                 tabIndex={0}
                 testId="navbar-login-mobile">
                 Log in
