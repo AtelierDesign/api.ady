@@ -18,16 +18,12 @@ export default function Index() {
   if (user) {
     return (
       <>
-        <Hero />
-        <hr />
         <Content />
       </>
     );
   }
   return (
     <>
-    <HeroDark />
-    <ThreeCols />
     <Content />
     </>
   );
