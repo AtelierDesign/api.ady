@@ -36,12 +36,12 @@ const NavBar = () => {
             <li className="nav-item dropdown">
               <Link href="/open">
                 <a className="nav-link" aria-expanded="false">
-                  Dropdown
+                  About
                 </a>
               </Link>
               <Link href="#">
                 <a className="nav-link" aria-expanded="false">
-                  Something here
+                  Privacy
                 </a>
               </Link>
               {user && (
@@ -74,6 +74,24 @@ const NavBar = () => {
                 Log in
               </AnchorLink>
             </NavItem>
+            <NavItem>
+            <AnchorLink
+              href="/api/signup"
+              className="nav-link nav-link-main"
+              tabIndex={0}
+              testId="navbar-login-mobile">
+              Sign Up
+            </AnchorLink>
+          </NavItem>
+          <NavItem>
+          <AnchorLink
+            href="/api/ady-login"
+            className="nav-link nav-link-main"
+            tabIndex={0}
+            testId="navbar-login-mobile">
+            ADY LOGIN
+          </AnchorLink>
+        </NavItem>
           </div>
             )}
             {user && (
