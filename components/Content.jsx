@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AdyLogin from '../components/AdyLogin';
 import contentData from '../utils/contentData';
 
 const Content = () => (

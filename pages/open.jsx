@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import Content from '../components/Content';
 import Section from '../components/Section';
 
-import AdyLogin from '../components/AdyLogin';
 
 
 export default function Open() {

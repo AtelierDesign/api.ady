@@ -1,6 +1,7 @@
 import React from 'react';
+import { IdProvider } from '@radix-ui/react-id';
 import { UserProvider } from '@auth0/nextjs-auth0';
-import { useEffect } from 'react'
+
 
 import Layout from '../components/Layout';
 
@@ -12,15 +13,13 @@ import '../styles/globals.scss';
 initFontAwesome();
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-  import('bootstrap/dist/js/bootstrap')
-}, [])
-
   return (
     <UserProvider>
+      <IdProvider>
       <Layout>
         <Component {...pageProps} />
-      </Layout>
+        </Layout>
+      </IdProvider>
     </UserProvider>
   );
 }
