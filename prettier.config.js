@@ -6,5 +6,4 @@ module.exports = {
   pringWidth: 140,
   bracketSpacing: true,
   bracketSameLine: true,
-  parser: 'babel',
 }
