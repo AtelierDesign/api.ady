@@ -1,5 +1,6 @@
 import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0';
+import { Box } from '../system/Box'
 import Link from 'next/link'
 
 import { styled } from '@stitches/react'
@@ -31,13 +32,13 @@ const TextBox = styled('div', {
 });
 
 export const DefaultButton = styled('button', {
-  backgroundColor: 'blue',
-  color: 'white',
+  backgroundColor: '#f2f2f2',
+  color: '#231f20',
   paddingLeft: '25px',
   paddingRight: '25px',
   py: '4px',
   height: '35px',
-  borderRadius: '0px',
+  borderRadius: '10px',
   border: '2px solid',
   borderColor: 'black',
   lineHeight: '1',
@@ -70,18 +71,18 @@ export default function Atelier() {
   }
   return (
     <>
-<CoverBox>
-  <TextBox>
-    <div>
-    <Link href="/api/auth/login" passHref>
-    <DefaultButton>LOGIN</DefaultButton>
-    </Link>
-    <Link href="/api/auth/signup" passHref>
-    <DefaultButton>Or Sign up</DefaultButton>
-    </Link>
-  </div>
-  </TextBox>
-</CoverBox>
+
+    <CoverBox>
+      <TextBox>
+          <Link href="/api/auth/login" passHref>
+            <DefaultButton>LOGIN</DefaultButton>
+          </Link>
+          <Link href="/api/auth/signup" passHref>
+            <DefaultButton>Or Sign up</DefaultButton>
+          </Link>
+      </TextBox>
+    </CoverBox>
+
     </>
   );
 }
