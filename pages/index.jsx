@@ -1,9 +1,9 @@
 import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0';
-import { Box } from '../system/Box'
-import Link from 'next/link'
+// import { Box } from '../system/Box'
+import Link from 'next/link';
 
-import { styled } from '@stitches/react'
+import { styled } from '@stitches/react';
 
 const CoverBox = styled('div', {
   zIndex: '10',
@@ -16,7 +16,7 @@ const CoverBox = styled('div', {
   margin: 'auto',
   opacity: '0.9',
   backdropFilter: 'invert(10%) blur(10px)',
-  saturate: '300%'
+  saturate: '300%',
 });
 
 const TextBox = styled('div', {
@@ -28,7 +28,7 @@ const TextBox = styled('div', {
   width: '100%',
   textAlign: 'center',
   margin: 'auto',
-  padding: '1rem'
+  padding: '1rem',
 });
 
 export const DefaultButton = styled('button', {
@@ -51,10 +51,9 @@ export const DefaultButton = styled('button', {
   '&:hover': {
     backgroundColor: 'red',
     color: 'white',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 });
-
 
 export default function Atelier() {
   const { user, error, isLoading } = useUser();
@@ -71,18 +70,16 @@ export default function Atelier() {
   }
   return (
     <>
-
-    <CoverBox>
-      <TextBox>
+      <CoverBox>
+        <TextBox>
           <Link href="/api/auth/login" passHref>
             <DefaultButton>LOGIN</DefaultButton>
           </Link>
           <Link href="/api/auth/signup" passHref>
             <DefaultButton>Or Sign up</DefaultButton>
           </Link>
-      </TextBox>
-    </CoverBox>
-
+        </TextBox>
+      </CoverBox>
     </>
   );
 }
