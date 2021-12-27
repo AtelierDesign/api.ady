@@ -1,6 +1,6 @@
-import { styled } from '../stitches.config.js';
+import { styled } from '@stitches/react';
 
-export const Text = styled('span', {
+const Text = styled('span', {
   // Reset
   lineHeight: '1',
   margin: '0',
@@ -236,3 +236,5 @@ export const Text = styled('span', {
     variant: 'contrast',
   },
 });
+
+export default Text;

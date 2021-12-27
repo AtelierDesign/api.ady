@@ -1,6 +1,6 @@
-import { styled } from '../stitches.config.js';
+import { styled } from '@stitches/react';
 
-export const Flex = styled('div', {
+const Flex = styled('div', {
   boxSizing: 'border-box',
   display: 'flex',
 
@@ -98,3 +98,5 @@ export const Flex = styled('div', {
     wrap: 'noWrap',
   },
 });
+
+export default Flex;

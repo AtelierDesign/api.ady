@@ -1,8 +1,8 @@
 import React from 'react';
 // import NextLink from 'next/link';
 // import { Box } from '@system/box';
-import { Flex } from '../system/flex';
-import { Text } from '../system/text';
+import { Flex } from './Flex';
+import { Text } from './Text';
 // import { Text } from '@system/text';
 // import { Link } from '@system/link';
 
@@ -11,29 +11,31 @@ const Navigation = () => (
     <Flex
       as="header"
       css={{
-        py: '12px',
-        px: '5px',
-        jc: 'space-between',
+        paddingTop: '12px',
+        paddingBottom: '12px',
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        justifyContent: 'space-between',
         position: 'fixed',
-        m: '0',
-        bc: '$light100',
+        margin: '0',
+        backgroundColor: 'rgba(240, 240, 240, 0.5)',
         width: '100vw',
         backdropFilter: 'blur(10px)',
         saturate: '200%',
         borderBottomWidth: '1px',
-        brc: '$lime9',
 
         zIndex: '9999',
       }}>
       <Text
         css={{
+          fontFamily: 'sans-serif',
           fontWeight: '800',
           fontSize: '16px',
-          color: '$gray12',
+          color: '#000',
           lineHeight: '1.5',
           letterSpacing: '-0.05rem',
         }}>
-        Atelier Design®
+        ATELIER®
       </Text>
     </Flex>
   </div>
