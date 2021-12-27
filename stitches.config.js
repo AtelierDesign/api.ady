@@ -113,13 +113,22 @@ import {
   orangeDarkA,
   brownDarkA,
   bronzeDarkA,
-  goldDarkA
+  goldDarkA,
 } from '@radix-ui/colors';
-import type * as Stitches from '@stitches/react';
+import Stitches from '@stitches/react';
 import { mixins } from 'stitches-mixins';
-export type { VariantProps } from '@stitches/react';
+export { VariantProps } from '@stitches/react';
 
-export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes, config } = createStitches({
+export const {
+  styled,
+  css,
+  theme,
+  createTheme,
+  getCssText,
+  globalCss,
+  keyframes,
+  config,
+} = createStitches({
   theme: {
     colors: {
       ...gray,
@@ -192,6 +201,8 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       light100: 'rgba(240, 240, 240, 0.5)',
       clear100: 'rgba(240, 240, 240, 0.2)',
 
+      light50: 'rgba(240, 240, 240, 0.8)',
+
       // Semantic colors
       hiContrast: '$slate12',
       semiTransparent: '$light100',
@@ -201,13 +212,14 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       panel: 'white',
       transparentPanel: 'hsl(0 0% 0% / 97%)',
       shadowLight: 'hsl(206 22% 7% / 35%)',
-      shadowDark: 'hsl(206 22% 7% / 20%)'
+      shadowDark: 'hsl(206 22% 7% / 20%)',
     },
     fonts: {
       inter: "'Inter', 'sans-serif'",
       jetbrain: "'Jet Brains', monopace",
       forma: "'forma-djr-micro, sans-serif'",
-      untitled: "-apple-system, BlinkMacSystemFont, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+      untitled:
+        "-apple-system, BlinkMacSystemFont, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     },
     space: {
       1: '5px',
@@ -218,7 +230,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       6: '35px',
       7: '45px',
       8: '65px',
-      9: '80px'
+      9: '80px',
     },
     sizes: {
       1: '5px',
@@ -229,7 +241,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       6: '35px',
       7: '45px',
       8: '65px',
-      9: '80px'
+      9: '80px',
     },
     fontSizes: {
       1: '12px',
@@ -240,7 +252,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       6: '21px',
       7: '27px',
       8: '35px',
-      9: '59px'
+      9: '59px',
     },
     fontWeights: {
       100: '100',
@@ -251,7 +263,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       600: '600',
       700: '700',
       800: '800',
-      900: '900'
+      900: '900',
     },
     radii: {
       1: '4px',
@@ -259,15 +271,15 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       3: '8px',
       4: '12px',
       round: '50%',
-      pill: '9999px'
+      pill: '9999px',
     },
     zIndices: {
       1: '100',
       2: '200',
       3: '300',
       4: '400',
-      max: '999'
-    }
+      max: '999',
+    },
   },
   media: {
     bp1: '(min-width: 520px)',
@@ -282,146 +294,146 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
     motion: '(prefers-reduced-motion)',
     hover: '(any-hover: hover)',
     dark: '(prefers-color-scheme: dark)',
-    light: '(prefers-color-scheme: light)'
+    light: '(prefers-color-scheme: light)',
   },
   utils: {
     include: mixins({
       orchidShadow: {
-        boxShadow: '0 25px 50px -12px orchid'
-      }
+        boxShadow: '0 25px 50px -12px orchid',
+      },
     }),
     p: (value: Stitches.PropertyValue<'padding'>) => ({
-      padding: value
+      padding: value,
     }),
     pt: (value: Stitches.PropertyValue<'paddingTop'>) => ({
-      paddingTop: value
+      paddingTop: value,
     }),
     pr: (value: Stitches.PropertyValue<'paddingRight'>) => ({
-      paddingRight: value
+      paddingRight: value,
     }),
     pb: (value: Stitches.PropertyValue<'paddingBottom'>) => ({
-      paddingBottom: value
+      paddingBottom: value,
     }),
     pl: (value: Stitches.PropertyValue<'paddingLeft'>) => ({
-      paddingLeft: value
+      paddingLeft: value,
     }),
     px: (value: Stitches.PropertyValue<'paddingLeft'>) => ({
       paddingLeft: value,
-      paddingRight: value
+      paddingRight: value,
     }),
     py: (value: Stitches.PropertyValue<'paddingTop'>) => ({
       paddingTop: value,
-      paddingBottom: value
+      paddingBottom: value,
     }),
     w: (value: Stitches.PropertyValue<'width'>) => ({
-      width: value
+      width: value,
     }),
     m: (value: Stitches.PropertyValue<'margin'>) => ({
-      margin: value
+      margin: value,
     }),
     mt: (value: Stitches.PropertyValue<'marginTop'>) => ({
-      marginTop: value
+      marginTop: value,
     }),
     mr: (value: Stitches.PropertyValue<'marginRight'>) => ({
-      marginRight: value
+      marginRight: value,
     }),
     mb: (value: Stitches.PropertyValue<'marginBottom'>) => ({
-      marginBottom: value
+      marginBottom: value,
     }),
     ml: (value: Stitches.PropertyValue<'marginLeft'>) => ({
-      marginLeft: value
+      marginLeft: value,
     }),
     mx: (value: Stitches.PropertyValue<'marginLeft'>) => ({
       marginLeft: value,
-      marginRight: value
+      marginRight: value,
     }),
     my: (value: Stitches.PropertyValue<'marginTop'>) => ({
       marginTop: value,
-      marginBottom: value
+      marginBottom: value,
     }),
 
     ta: (value: Stitches.PropertyValue<'textAlign'>) => ({ textAlign: value }),
 
     fd: (value: Stitches.PropertyValue<'flexDirection'>) => ({
-      flexDirection: value
+      flexDirection: value,
     }),
     fw: (value: Stitches.PropertyValue<'flexWrap'>) => ({ flexWrap: value }),
 
     ai: (value: Stitches.PropertyValue<'alignItems'>) => ({
-      alignItems: value
+      alignItems: value,
     }),
     ac: (value: Stitches.PropertyValue<'alignContent'>) => ({
-      alignContent: value
+      alignContent: value,
     }),
     jc: (value: Stitches.PropertyValue<'justifyContent'>) => ({
-      justifyContent: value
+      justifyContent: value,
     }),
     as: (value: Stitches.PropertyValue<'alignSelf'>) => ({ alignSelf: value }),
     fg: (value: Stitches.PropertyValue<'flexGrow'>) => ({ flexGrow: value }),
     fs: (value: Stitches.PropertyValue<'flexShrink'>) => ({
-      flexShrink: value
+      flexShrink: value,
     }),
     fb: (value: Stitches.PropertyValue<'flexBasis'>) => ({ flexBasis: value }),
 
     bc: (value: Stitches.PropertyValue<'backgroundColor'>) => ({
-      backgroundColor: value
+      backgroundColor: value,
     }),
 
     br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
-      borderRadius: value
+      borderRadius: value,
     }),
     btrr: (value: Stitches.PropertyValue<'borderTopRightRadius'>) => ({
-      borderTopRightRadius: value
+      borderTopRightRadius: value,
     }),
     bbrr: (value: Stitches.PropertyValue<'borderBottomRightRadius'>) => ({
-      borderBottomRightRadius: value
+      borderBottomRightRadius: value,
     }),
     bblr: (value: Stitches.PropertyValue<'borderBottomLeftRadius'>) => ({
-      borderBottomLeftRadius: value
+      borderBottomLeftRadius: value,
     }),
     btlr: (value: Stitches.PropertyValue<'borderTopLeftRadius'>) => ({
-      borderTopLeftRadius: value
+      borderTopLeftRadius: value,
     }),
     brc: (value: Stitches.PropertyValue<'borderColor'>) => ({
-      borderColor: value
+      borderColor: value,
     }),
     bs: (value: Stitches.PropertyValue<'boxShadow'>) => ({ boxShadow: value }),
     lh: (value: Stitches.PropertyValue<'lineHeight'>) => ({
-      lineHeight: value
+      lineHeight: value,
     }),
     ox: (value: Stitches.PropertyValue<'overflowX'>) => ({ overflowX: value }),
     oy: (value: Stitches.PropertyValue<'overflowY'>) => ({ overflowY: value }),
 
     pe: (value: Stitches.PropertyValue<'pointerEvents'>) => ({
-      pointerEvents: value
+      pointerEvents: value,
     }),
     us: (value: Stitches.PropertyValue<'userSelect'>) => ({
       WebkitUserSelect: value,
-      userSelect: value
+      userSelect: value,
     }),
 
     userSelect: (value: Stitches.PropertyValue<'userSelect'>) => ({
       WebkitUserSelect: value,
-      userSelect: value
+      userSelect: value,
     }),
 
     size: (value: Stitches.PropertyValue<'width'>) => ({
       width: value,
-      height: value
+      height: value,
     }),
 
     appearance: (value: Stitches.PropertyValue<'appearance'>) => ({
       WebkitAppearance: value,
-      appearance: value
+      appearance: value,
     }),
     backgroundClip: (value: Stitches.PropertyValue<'backgroundClip'>) => ({
       WebkitBackgroundClip: value,
-      backgroundClip: value
-    })
-  }
+      backgroundClip: value,
+    }),
+  },
 });
 
-export type CSS = Stitches.CSS<typeof config>;
+// export { CSS } = Stitches.CSS<typeof config>;
 
 export const darkTheme = createTheme('darkTheme', {
   colors: {
@@ -490,7 +502,7 @@ export const darkTheme = createTheme('darkTheme', {
     panel: '$slate3',
     transparentPanel: 'hsl(0 100% 100% / 97%)',
     shadowLight: 'hsl(206 22% 7% / 35%)',
-    shadowDark: 'hsl(206 22% 7% / 20%)'
+    shadowDark: 'hsl(206 22% 7% / 20%)',
   },
-  utils: {}
+  utils: {},
 });

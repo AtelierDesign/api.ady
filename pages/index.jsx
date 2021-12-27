@@ -6,32 +6,35 @@ import Link from 'next/link';
 import { styled } from '@stitches/react';
 
 const CoverBox = styled('div', {
-  zIndex: '10',
   width: '100vw',
-  minWidth: '100vw',
-  height: '100%',
-  backgroundColor: 'rgba(240, 240, 240, 0.3)',
-  display: 'block',
+  height: '100vh',
+  padding: '0',
+  backgroundColor: '$light100',
   position: 'relative',
-  margin: 'auto',
+  margin: '0',
   opacity: '0.9',
-  backdropFilter: 'invert(10%) blur(10px)',
-  saturate: '300%',
+  backdropFilter: 'blur(10px)',
+  saturate: '200%',
+
+  overflowX: 'hidden',
+  overflowY: 'hidden',
 });
 
 const TextBox = styled('div', {
-  zIndex: '200',
+  backgroundColor: '$light50',
+  border: '1px solid #000',
+  borderRadius: '8px',
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '100%',
+  width: 'auto',
   textAlign: 'center',
   margin: 'auto',
-  padding: '1rem',
+  padding: '2rem',
 });
 
-export const DefaultButton = styled('button', {
+const DefaultButton = styled('button', {
   backgroundColor: '#f2f2f2',
   color: '#231f20',
   paddingLeft: '25px',
@@ -63,13 +66,13 @@ export default function Atelier() {
 
   if (user) {
     return (
-      <>
+      <div>
         <p>Youre Logged in</p>
-      </>
+      </div>
     );
   }
   return (
-    <>
+    <div>
       <CoverBox>
         <TextBox>
           <Link href="/api/auth/login" passHref>
@@ -80,6 +83,6 @@ export default function Atelier() {
           </Link>
         </TextBox>
       </CoverBox>
-    </>
+    </div>
   );
 }
