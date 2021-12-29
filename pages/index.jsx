@@ -3,6 +3,8 @@ import { useUser } from '@auth0/nextjs-auth0';
 // import { Box } from '../system/Box'
 import Link from 'next/link';
 
+import Navigation from '../components/Navigation';
+
 import { styled } from '@stitches/react';
 
 const CoverBox = styled('div', {
@@ -34,6 +36,23 @@ const TextBox = styled('div', {
   padding: '2rem',
 });
 
+const Text = styled('p', {
+  fontFamily: 'sans-serif',
+  fontSize: '15px',
+  fontWeight: '600',
+  textAlign: 'left',
+  alignItems: 'left',
+  color: '#000',
+
+  lineHeight: '0',
+  paddingTop: '8px',
+  paddingBottom: '8px',
+  paddingLeft: '18px',
+  paddingRight: '18px',
+
+  zIndex: '9999',
+});
+
 const DefaultButton = styled('button', {
   backgroundColor: '#f2f2f2',
   color: '#231f20',
@@ -42,7 +61,8 @@ const DefaultButton = styled('button', {
   py: '4px',
   height: '35px',
   borderRadius: '10px',
-  border: '2px solid',
+  // border: '2px solid',
+  border: 'none',
   borderColor: 'black',
   lineHeight: '1',
   width: 'auto',
@@ -52,7 +72,7 @@ const DefaultButton = styled('button', {
   fontSize: '14px',
 
   '&:hover': {
-    backgroundColor: 'red',
+    backgroundColor: '#000',
     color: 'white',
     cursor: 'pointer',
   },
@@ -73,6 +93,10 @@ export default function Atelier() {
   }
   return (
     <div>
+      <Navigation>
+        <Text>ATELIER®</Text>
+      </Navigation>
+
       <CoverBox>
         <TextBox>
           <Link href="/api/auth/login" passHref>
