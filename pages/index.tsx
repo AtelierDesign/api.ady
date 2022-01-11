@@ -1,10 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { useUser } from '@auth0/nextjs-auth0';
+import Avatar from 'boring-avatars';
 
 import Auth0Layout from '@components/Auth0Layout';
 import { Box } from '@atelier/box';
 import { Container } from '@atelier/container';
+import { Grid } from '@atelier/grid';
+import { Section } from '@atelier/section';
 import { Heading } from '@atelier/heading';
 import { Text } from '@atelier/text';
 import { Paragraph } from '@atelier/paragraph';
@@ -38,25 +41,65 @@ export default function Home(): React.ReactElement {
         {user && (
           <>
             <Container>
-              <Box css={{ width: '50px', height: '50px', padding: '5px' }}>
-                <Image className="user_image" src={user.picture} height={30} width={30} alt="Image" />
-              </Box>
-              <Heading
-                size="2"
-                css={{
-                  fontFamily: '$neuewide',
-                  fontWeight: '800',
-                  color: '$gray12',
-                  textTransform: 'uppercase',
-                  lineHeight: '2',
-                }}
-              >
-                <span>{user.name}</span>,
-              </Heading>
+              <Section size="4">
+                <Container size="3" css={{ px: '0' }}>
+                  <Grid
+                    css={{
+                      gap: '$3',
+                      align: 'center',
+                      gridTemplateColumns: '1fr',
+                      '@bp1': {
+                        gap: '$3',
+                        gridTemplateColumns: '1fr 1fr',
+                      },
+                      '@bp2': {
+                        gap: '$3',
+                        gridTemplateColumns: '1fr 1fr',
+                      },
+                    }}>
+                    {/* <!-- TWITTER --> */}
+                    <Box
+                      css={{
+                        display: 'flex',
 
-              <Heading size="2" css={{ fontFamily: '$inter', color: '$gray12' }}>
-                This is your space®.
-              </Heading>
+                        alignItems: 'center',
+
+                        margin: 'auto',
+                        padding: '5px',
+                        // backgroundColor: '$slate6',
+                        borderRadius: '12px',
+                        width: '100%',
+                        height: '100%',
+                      }}>
+                      {/*  <!-- <Image className="user_image" src={user.picture} height={30} width={30} alt="Image" /> --> */}
+                      <Avatar
+                        size={40}
+                        name={user.name}
+                        variant="marble"
+                        colors={['#15F31D', '#E9E4BB', '#BFD4B7', '#89A807', '#1A1C27']}
+                      />
+                      <span>{user.sub}</span>
+                      <Heading
+                        size="2"
+                        css={{
+                          marginLeft: '12px',
+                          marginRight: '12px',
+                          fontFamily: '$neuewide',
+                          fontWeight: '800',
+                          color: '$gray12',
+                          textTransform: 'uppercase',
+                          lineHeight: '2',
+                        }}>
+                        <span>{user.name}</span>
+                      </Heading>
+                    </Box>
+
+                    <Heading size="2" css={{ fontFamily: '$inter', color: '$gray12' }}>
+                      Atelier Design Yield®
+                    </Heading>
+                  </Grid>
+                </Container>
+              </Section>
 
               <Separator size="2" css={{ backgroundColor: '$gray12' }} />
 
