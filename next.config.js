@@ -1,10 +1,12 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
   poweredByHeader: false,
+
+  reactStrictMode: true,
   images: {
-	  domains: ['cdn.ady.systems', 'ady.systems', 'auth.ady.world', 's.gravatar.com'],
-	},
+    domains: ['cdn.ady.systems', 'ady.systems', 'images.unsplash.com', 'pbs.twimg.com'],
+  },
   experimental: {
-    urlImports: ['https://stackpath.bootstrapcdn.com', 'https://cdn.ady.systems/', 'https://cdn.skypack.dev/', 'https://auth.ady.world'],
+    urlImports: ['https://cdn.ady.systems/', 'https://cdn.skypack.dev/'],
   },
 };
