@@ -9,6 +9,7 @@ import { Box, box } from '@atelier/box';
 
 // PROGRESS LOADER
 import NextNprogress from 'nextjs-progressbar';
+import { CookieBanner } from '@components/Functions/CookieBanner';
 
 // MAIN STYLE IMPORTS
 import '@styles/inter.css';
@@ -35,12 +36,12 @@ export default function App({ Component, pageProps }: AppProps): React.ReactElem
   return (
     <UserProvider user={user}>
       <Box css={{ backgroundColor: '$slate1' }}>
+        <CookieBanner />
         <div
           className={appWrapper({
             display: 'flex',
             flexDirection: 'column',
-          })}
-        >
+          })}>
           <div className={box({ flex: 1 })}>
             <NextNprogress
               color="linear-gradient(to right, #b5bdc8 0%,#828c95 36%,#28343b 100%)"
