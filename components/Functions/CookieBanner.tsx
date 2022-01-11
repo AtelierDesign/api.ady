@@ -1,8 +1,6 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 
-import { light100 } from 'stitches.config';
-
 export const CookieBanner = () => {
   return (
     <CookieConsent
