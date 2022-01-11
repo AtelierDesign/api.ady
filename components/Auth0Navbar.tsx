@@ -31,8 +31,7 @@ const Auth0Navbar = (): React.ReactElement => {
           saturate: '300%',
 
           zIndex: '9999',
-        }}
-      >
+        }}>
         {/* <!-- LOGO SECTION --> */}
         <NextLink href="/atelier" passHref>
           <Box
@@ -45,8 +44,7 @@ const Auth0Navbar = (): React.ReactElement => {
                 boxShadow: 'none',
               },
               '@bp2': { ml: '$5' },
-            }}
-          >
+            }}>
             <Text
               css={{
                 zIndex: '999',
@@ -56,8 +54,7 @@ const Auth0Navbar = (): React.ReactElement => {
                 color: '$gray12',
                 lineHeight: '30px',
                 letterSpacing: '-0.03rem',
-              }}
-            >
+              }}>
               ATELIER®
             </Text>
             {/*<Image className="logo" alt="logo" src="/butterfly_logo.svg" width={80} height={18} />*/}
@@ -75,8 +72,7 @@ const Auth0Navbar = (): React.ReactElement => {
             '@sm': {
               display: 'none',
             },
-          }}
-        >
+          }}>
           <NextLink href="/" passHref>
             <Link variant="subtle" css={{ marginRight: '$3', color: '$gray12', '@sm': { marginRight: '$2' } }}>
               Home
@@ -97,8 +93,7 @@ const Auth0Navbar = (): React.ReactElement => {
                 color: '$gray12',
                 mr: '$3',
                 '@bp2': { display: 'block', mr: '$3' },
-              }}
-            >
+              }}>
               Shows
             </Link>
           </NextLink>
@@ -111,8 +106,7 @@ const Auth0Navbar = (): React.ReactElement => {
                 color: '$gray12',
                 mr: '$3',
                 '@bp2': { display: 'block', mr: '$3' },
-              }}
-            >
+              }}>
               Profile
             </Link>
           </NextLink>
@@ -125,8 +119,7 @@ const Auth0Navbar = (): React.ReactElement => {
                 color: '$gray12',
                 mr: '$3',
                 '@bp2': { display: 'block', mr: '$3' },
-              }}
-            >
+              }}>
               Profile SSR
             </Link>
           </NextLink>
@@ -142,30 +135,27 @@ const Auth0Navbar = (): React.ReactElement => {
 
           {user ? (
             <>
-              <NextLink href="/api/auth/logout" passHref>
-                <Link
-                  variant="subtle"
-                  css={{
-                    // display: 'none',
-                    fontSize: '13px',
-                    color: '$white',
-                    // backgroundColor: '$crimson9',
-                    // border: '1px solid $crimson9',
-                    backgroundColor: '$lime9',
-                    border: '0px solid $crimson9',
-                    borderRadius: '4px',
-                    paddingTop: '6px',
-                    paddingBottom: '6px',
-                    paddingLeft: '10px',
-                    paddingRight: '10px',
-                    mr: '$3',
-                    '@sm': { display: 'block', mr: '$3' },
-                    '&:hover': { cursor: 'pointer' },
-                  }}
-                >
-                  Logout
-                </Link>
-              </NextLink>
+              <Link
+                href="/api/auth/logout"
+                variant="subtle"
+                css={{
+                  fontSize: '13px',
+                  color: '$white',
+                  // backgroundColor: '$crimson9',
+                  // border: '1px solid $crimson9',
+                  backgroundColor: '$lime9',
+                  border: '0px solid $crimson9',
+                  borderRadius: '6px',
+                  paddingTop: '6px',
+                  paddingBottom: '6px',
+                  paddingLeft: '10px',
+                  paddingRight: '10px',
+                  mr: '$3',
+                  '@sm': { display: 'none', mr: '$3' },
+                  '&:hover': { cursor: 'pointer' },
+                }}>
+                Logout
+              </Link>
             </>
           ) : (
             <>
@@ -177,36 +167,32 @@ const Auth0Navbar = (): React.ReactElement => {
                     color: '$gray12',
                     mr: '$3',
                     '@bp2': { display: 'block', mr: '$3' },
-                  }}
-                >
+                  }}>
                   Login
                 </Link>
               </NextLink>
 
-              <NextLink href="/api/auth/login" passHref>
-                <Link
-                  variant="subtle"
-                  css={{
-                    // display: 'none',
-                    fontSize: '13px',
-                    color: '$white',
-                    // backgroundColor: '$crimson9',
-                    // border: '1px solid $crimson9',
-                    backgroundColor: '$lime9',
-                    border: '0px solid $crimson9',
-                    borderRadius: '4px',
-                    paddingTop: '6px',
-                    paddingBottom: '6px',
-                    paddingLeft: '10px',
-                    paddingRight: '10px',
-                    mr: '$3',
-                    '@sm': { display: 'block', mr: '$3' },
-                    '&:hover': { cursor: 'pointer' },
-                  }}
-                >
-                  Sign in
-                </Link>
-              </NextLink>
+              <Link
+                href="/api/auth/login"
+                variant="subtle"
+                css={{
+                  fontSize: '13px',
+                  color: '$white',
+                  // backgroundColor: '$crimson9',
+                  // border: '1px solid $crimson9',
+                  backgroundColor: '$lime9',
+                  border: '0px solid $crimson9',
+                  borderRadius: '6px',
+                  paddingTop: '6px',
+                  paddingBottom: '6px',
+                  paddingLeft: '10px',
+                  paddingRight: '10px',
+                  mr: '$3',
+                  '@sm': { display: 'none', mr: '$3' },
+                  '&:hover': { cursor: 'pointer' },
+                }}>
+                Sign in
+              </Link>
             </>
           )}
 
