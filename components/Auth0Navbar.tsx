@@ -141,17 +141,14 @@ const Auth0Navbar = (): React.ReactElement => {
                 css={{
                   fontSize: '13px',
                   color: '$white',
-                  // backgroundColor: '$crimson9',
-                  // border: '1px solid $crimson9',
                   backgroundColor: '$lime9',
-                  border: '0px solid $crimson9',
                   borderRadius: '6px',
                   paddingTop: '6px',
                   paddingBottom: '6px',
                   paddingLeft: '10px',
                   paddingRight: '10px',
                   mr: '$3',
-                  '@sm': { display: 'none', mr: '$3' },
+                  '@sm': { display: '', mr: '$3' },
                   '&:hover': { cursor: 'pointer' },
                 }}>
                 Logout
@@ -178,20 +175,18 @@ const Auth0Navbar = (): React.ReactElement => {
                 css={{
                   fontSize: '13px',
                   color: '$white',
-                  // backgroundColor: '$crimson9',
-                  // border: '1px solid $crimson9',
                   backgroundColor: '$lime9',
                   border: '0px solid $crimson9',
                   borderRadius: '6px',
-                  paddingTop: '6px',
-                  paddingBottom: '6px',
+                  paddingTop: '5px',
+                  paddingBottom: '5px',
                   paddingLeft: '10px',
                   paddingRight: '10px',
                   mr: '$3',
-                  '@sm': { display: 'none', mr: '$3' },
+                  '@sm': { display: 'block', mr: '$3' },
                   '&:hover': { cursor: 'pointer' },
                 }}>
-                Sign in
+                Sign up
               </Link>
             </>
           )}
@@ -204,22 +199,3 @@ const Auth0Navbar = (): React.ReactElement => {
 };
 
 export default Auth0Navbar;
-
-{
-  /*
-
-
-{user ? (
-  <>
-    <li>
-      <Link href="/profile">
-        <a>Profile</a>
-      </Link>
-    </li>{' '}
-    <li>
-      <a href="/profile-ssr">Profile (SSR)</a>
-    </li>{' '}
-    <li>
-      <a href="/api/auth/logout" data-testid="logout">
-  */
-}

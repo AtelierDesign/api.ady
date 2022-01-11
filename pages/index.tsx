@@ -11,7 +11,8 @@ import { Section } from '@atelier/section';
 import { Heading } from '@atelier/heading';
 import { Text } from '@atelier/text';
 import { Paragraph } from '@atelier/paragraph';
-import { Separator } from '@atelier/separator';
+
+// props => ['name', 'picture', 'updated_at', 'nickname', 'sub(provider)']
 
 export default function Home(): React.ReactElement {
   const { user, error, isLoading } = useUser();
@@ -19,8 +20,16 @@ export default function Home(): React.ReactElement {
   return (
     <Auth0Layout>
       <Container css={{ textAlign: 'left' }}>
-        <Heading size="3" css={{ fontFamily: '$inter', color: '$gray12', marginBottom: '20px' }}>
-          Next.js and Auth0 Example
+        <Heading
+          size="1"
+          css={{
+            fontWeight: '800',
+            textAlign: 'center',
+            fontFamily: '$inter',
+            color: '$gray12',
+            marginBottom: '20px',
+          }}>
+          ATELIER DESIGN YIELD®
         </Heading>
 
         {isLoading && (
@@ -61,12 +70,9 @@ export default function Home(): React.ReactElement {
                     <Box
                       css={{
                         display: 'flex',
-
                         alignItems: 'center',
-
                         margin: 'auto',
                         padding: '5px',
-                        // backgroundColor: '$slate6',
                         borderRadius: '12px',
                         width: '100%',
                         height: '100%',
@@ -78,7 +84,7 @@ export default function Home(): React.ReactElement {
                         variant="marble"
                         colors={['#15F31D', '#E9E4BB', '#BFD4B7', '#89A807', '#1A1C27']}
                       />
-                      <span>{user.sub}</span>
+
                       <Heading
                         size="2"
                         css={{
@@ -100,8 +106,6 @@ export default function Home(): React.ReactElement {
                   </Grid>
                 </Container>
               </Section>
-
-              <Separator size="2" css={{ backgroundColor: '$gray12' }} />
 
               <Heading size="1" css={{ fontFamily: '$inter', color: '$gray12' }}>
                 Rendered user info on the client

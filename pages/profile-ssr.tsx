@@ -11,7 +11,7 @@ export default function Profile({ user }: ProfileProps): React.ReactElement {
   return (
     <Auth0Layout>
       <Heading size="2" css={{ fontFamily: '$inter', color: '$gray12' }}>
-        Profile
+        <span>{user.name}</span>
       </Heading>
 
       <Container>
